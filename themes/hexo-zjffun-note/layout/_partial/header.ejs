@@ -1,0 +1,13 @@
+<header id="header">
+  <div id="banner"></div>
+  <div id="header-inner">
+    <nav id="main-nav">
+      <% for (var i in theme.menu){ %>
+        <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= __(i) %></a>
+      <% } %>
+    </nav>
+    <div id="search-form-wrap">
+      <%- search_form({button: '&#xF002;', text: __('search')}) %>
+    </div>
+  </div>
+</header>

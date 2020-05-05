@@ -1,0 +1,15 @@
+{
+  "extends": ["airbnb-base/legacy"],
+  "rules": {
+    "wrap-iife": "off",
+    "linebreak-style": "off",
+    "func-names": "off",
+    "one-var": "off",
+    "vars-on-top": "off",
+    // nice rule, but conflict with prettier.
+    // https://github.com/prettier/prettier/issues/3806
+    "operator-linebreak": "off"
+  },
+  "globals": { "jQuery": "readonly", "hexo": "readonly" },
+  "ignorePatterns": ["*.ejs"]
+}

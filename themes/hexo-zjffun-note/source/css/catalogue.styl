@@ -1,0 +1,50 @@
+.catalogue
+	position: relative
+	display: flex
+	background: #fefefe
+	&__nav
+		flex: 0 0 260px
+		width: 260px
+		font-size: 1rem
+		padding: 10px 0 0 10px
+		ul
+			position: sticky
+			top: 0
+			left: 0
+		a
+			position: relative
+			text-decoration: none
+			margin-left: 10px
+			line-height: 1.5rem
+			color: color-blue
+			&:hover, &:focus, &:active
+				&::after
+					@extend $gorgeous-text-decorate
+		@media mq-mobile
+			display: none
+	&__content
+		flex: 1 1 0%
+.catalogue-list
+	list-style: none
+	padding: 0
+	line-height: 1.5em
+	&__item
+		padding-left: 10px
+	&__anchor
+		position: sticky
+		top: 0
+		display: block
+		margin-left: -10px
+		padding: 10px
+		background: color-aqua
+		z-index: 10
+	.title
+		position: relative
+		text-decoration: none
+		line-height: 1.5rem
+		color: color-blue
+		&:visited
+			color: color-purple
+		&:hover, &:focus, &:active
+			&::after
+				@extend $gorgeous-text-decorate
