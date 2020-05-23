@@ -7,6 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
+    "fetch": "npm run fetch:notes",
+    "fetch:notes": "git submodule update --init --remote --recursive --depth 1",
     "fix:js": "eslint ./themes/**/*.js --fix",
     "fix:styl": "stylus-supremacy format ./themes/**/*.styl --replace --options ./.stylintrc"
   },
