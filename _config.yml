@@ -29,7 +29,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: _posts/packages/**/*
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -38,7 +38,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ""
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -47,15 +47,15 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
-  tab_replace: ""
+  auto_detect: true
+  tab_replace: ''
   wrap: true
   hljs: false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 index_generator:
-  path: ""
+  path: ''
 
 # Category & Tag
 default_category: uncategorized
@@ -89,4 +89,4 @@ theme: hexo-zjffun-note
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ""
+  type: ''
