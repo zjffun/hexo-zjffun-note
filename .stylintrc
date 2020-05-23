@@ -1,6 +1,6 @@
 {
   "brackets": "never",
   "semicolons": "never",
-  "stylusSupremacy.tabStopChar": "  ",
+  "indentPref": 2,
   "stylusSupremacy.insertNewLineAroundBlocks": false,
 }
