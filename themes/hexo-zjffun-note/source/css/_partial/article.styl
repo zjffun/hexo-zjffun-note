@@ -1,7 +1,9 @@
 .article
+  @extend $block
   margin: 0
 .article-inner
-  @extend $block
+  max-width: 900px
+  margin: 0 auto
   overflow: hidden
 .article-meta
   clearfix()
@@ -278,7 +280,8 @@ $article-share-link
   display: flex
   flex-wrap: wrap
   &__sidebar
-    flex: 1 2 200px
+    flex: 0 0 aside-width
+    width: aside-width
     padding: 0 10px
     position: relative
     .toc-wrapper
@@ -300,12 +303,12 @@ $article-share-link
         &:hover, &:focus, &:active, &:target
           background: color-gray
   &__content
-    flex: 5 5 500px
+    flex: 1 1 0%
     padding: 0 10px
     width: 0px
     p, li, h1, h2, h3, h4, h5, h6
       max-width: 700px
-    pre, img
+    pre, img, figure, table
       max-width: 900px
   .toc-child
     padding-left: 10px
