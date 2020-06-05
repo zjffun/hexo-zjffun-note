@@ -279,11 +279,22 @@ $article-share-link
 .note
   display: flex
   flex-wrap: wrap
+  @media mq-mobile
+    flex-direction: column
   &__sidebar
+    position: relative
+    box-sizing: border-box
     flex: 0 0 aside-width
     width: aside-width
     padding: 0 10px
-    position: relative
+    @media mq-mobile
+      flex-basis: auto;
+    .toc-toggle
+      display: none;
+      padding: 4px 6px;
+      font-family: font-icon
+      @media mq-mobile
+        display: block;
     .toc-wrapper
       position: sticky
       top: 0
@@ -291,8 +302,8 @@ $article-share-link
       max-height: 100vh
       overflow: auto
       @media mq-mobile
-        max-height: 30vh
-    .toc-wrapper, .back
+        display: none;
+        max-height: none;
       a
         display: block
         position: relative
@@ -303,9 +314,10 @@ $article-share-link
         &:hover, &:focus, &:active, &:target
           background: color-gray
   &__content
-    flex: 1 1 0%
+    flex-grow: 1
+    box-sizing: border-box
     padding: 0 10px
-    width: 0px
+    max-width: 100%;
     p, li, h1, h2, h3, h4, h5, h6
       max-width: 700px
     pre, img, figure, table

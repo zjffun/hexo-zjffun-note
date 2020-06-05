@@ -87,4 +87,31 @@
       $backToTop.hide();
     }
   });
+
+  // Mobile toc
+  var $container = $('.toc-wrapper'),
+    isMobileNavAnim = false,
+    mobileNavAnimDuration = 200;
+
+  var startMobileNavAnim = function () {
+    isMobileNavAnim = true;
+  };
+
+  var stopMobileNavAnim = function () {
+    setTimeout(function () {
+      isMobileNavAnim = false;
+    }, mobileNavAnimDuration);
+  };
+
+  $('.toc-toggle').on('click', function () {
+    if (isMobileNavAnim) return;
+
+    startMobileNavAnim();
+    if ($container.hasClass('showing')) {
+      $container.removeClass('showing').hide(200);
+    } else {
+      $container.addClass('showing').show(200);
+    }
+    stopMobileNavAnim();
+  });
 })(jQuery);
