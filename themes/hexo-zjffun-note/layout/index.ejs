@@ -17,6 +17,9 @@
                 <a class="title" href="<%= post.permalink %>">
                   <%= post.path.split("/")[1] %>
                 </a>
+                <span class="update-date" title="<%= post.updated %>">
+                  <%= post.updated.format('YYYY-M-D') %>
+                </span>
               </li>
             </ul>
           <% }) %>

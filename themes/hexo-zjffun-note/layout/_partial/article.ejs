@@ -14,6 +14,14 @@
         <% if (post.link || post.title){ %>
           <header class="article-header">
             <%- partial('post/title', {class_name: 'article-title'}) %>
+            <ul class="article-info">
+              <li title="<%= post.updated %>">
+                更新时间：<%= post.updated.format('YYYY-MM-DD HH:mm') %>
+              </li>
+              <li title="<%= post.date %>">
+                创建时间：<%= post.date.format('YYYY-MM-DD HH:mm') %>
+              </li>
+            </ul>
           </header>
         <% } %>
         <div class="article-entry" itemprop="articleBody">
