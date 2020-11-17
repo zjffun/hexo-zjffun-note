@@ -15,6 +15,8 @@ jobs:
           node-version: "10.x"
       - name: Install npm dependencies
         run: npm install
+      - name: Fetch notes
+        run: npm run fetch
       - name: Run build task
         run: npm run build --if-present
       - name: Deploy to Server
