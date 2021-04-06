@@ -57,14 +57,19 @@ $line-numbers
       margin-bottom: 1em
       a
         float: right
-    .gutter pre
-      @extend $line-numbers
-      text-align: right
-      padding-right: 20px
-    .line
-      height: font-size * line-height
-    .line.marked
-      background: highlight-selection
+    &-gutter-wrap
+      display: flex
+      .code
+        flex: 1 1 auto;
+        overflow: auto;
+      .gutter pre
+        @extend $line-numbers
+        text-align: right
+        padding-right: 20px
+      .line
+        height: font-size * line-height
+      .line.marked
+        background: highlight-selection
   .gist
     margin: 0 article-padding * -1
     border-style: solid

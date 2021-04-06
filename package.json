@@ -13,10 +13,10 @@
     "fix:styl": "stylus-supremacy format ./themes/**/*.styl --replace --options ./.stylintrc"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "5.4.0"
   },
   "dependencies": {
-    "hexo": "^4.2.1",
+    "hexo": "^5.4.0",
     "hexo-generator-index": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^2.0.0",
@@ -28,5 +28,8 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "stylus-supremacy": "^2.14.3"
+  },
+  "resolutions": {
+    "hexo/hexo-util": "zjffun/hexo-util#my/highlight-wrap"
   }
 }
