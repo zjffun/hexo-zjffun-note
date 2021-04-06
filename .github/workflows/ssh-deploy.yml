@@ -13,8 +13,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "10.x"
-      - name: Install npm dependencies
-        run: npm install
+      - name: Install dependencies
+        run: yarn
       - name: Fetch notes
         run: npm run fetch
       - name: Run build task
