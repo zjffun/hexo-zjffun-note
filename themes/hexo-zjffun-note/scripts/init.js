@@ -21,5 +21,9 @@ hexo.locals.set('zCategories', function () {
     });
   });
 
-  return categroies;
+  return Array.from(
+    Object.entries(categroies).sort(function (a, b) {
+      return a[0].localeCompare(b[0]);
+    })
+  );
 });

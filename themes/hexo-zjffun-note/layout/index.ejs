@@ -1,14 +1,14 @@
 <div class="catalogue">
   <aside class="catalogue__nav">
     <ul>
-      <% Object.keys(site.zCategories).forEach(function(category, i){ %>
-        <li><a href="#<%= category%>"><%= category %></a></li>
+      <% site.zCategories.forEach(function(category, i){ %>
+        <li><a href="#<%= category[0]%>"><%= category[0] %></a></li>
       <% }) %>
     </ul>
   </aside>
   <main class="catalogue__content">
     <ul class="catalogue-list">
-      <% Object.entries(site.zCategories).forEach(function(category, i){ %>
+      <% site.zCategories.forEach(function(category, i){ %>
         <li class="catalogue-list__item" id="<%= category[0] %>">
           <p class="catalogue-list__anchor" ><%= category[0] %></p>
           <% category[1].forEach(function(post, i){ %>
