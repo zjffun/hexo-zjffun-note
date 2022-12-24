@@ -13,7 +13,7 @@
     "fix:styl": "stylus-supremacy format ./themes/**/*.styl --replace --options ./.stylintrc"
   },
   "hexo": {
-    "version": "5.4.0"
+    "version": "5.4.2"
   },
   "dependencies": {
     "hexo": "^5.4.0",
