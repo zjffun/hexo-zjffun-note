@@ -1,5 +1,4 @@
 source/_posts
-yarn.lock
 .DS_Store
 Thumbs.db
 db.json
